@@ -8,8 +8,8 @@ engine:                                   # Engine settings.
     enabled: true                         # Activate polyglot book.
     books:
       white: "lichess-book"                      # Name of the book to use as white.
-      black: "allplay"                         # Name of the book to use as black.
-      standard: null                 # Name of the book to use if there is no specific book for white, black or chess960.
+      black: "Cerebellum3Merge.bin"                         # Name of the book to use as black.
+      standard: "Cerebellum3Merge.bin"                 # Name of the book to use if there is no specific book for white, black or chess960.
       chess960: null                      # Name of the book to use for Chess960.
     selection: "best_move"                # Move selection is one of "weighted_random", "uniform_random" or "best_move".
   pybook:
@@ -43,12 +43,11 @@ engine:                                   # Engine settings.
     Move Overhead: 280                    # Increase if your bot flags games too often.
     Threads: 3                            # Max CPU threads the engine can use.
     Hash: 128                             # Max memory (in megabytes) the engine can allocate.
-    MultiPV: 21
+    MultiPV: 400
     Skill Level: 20
-    UCI_Elo : 2850
     Slow Mover: 40
  
-move_overhead_multiplier: 9             # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+move_overhead_multiplier: 3.0             # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
 
 challenge:                                # Incoming challenges. (Commenting allowed)
   concurrency: 1                          # Number of games to play simultaneously.
@@ -90,4 +89,4 @@ matchmaking:
 
 books: 
     lichess-book: "./engines/lichess-book.bin"  # Name of the opening book (to be used above in the polyglot section) and path to the polyglot opening book.  
-    allplay: "./engines/allplay.bin"
+    Cerebellum3Merge: "./Cerebellum3Merge.bin"
