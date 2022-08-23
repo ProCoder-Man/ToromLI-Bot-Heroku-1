@@ -31,7 +31,7 @@ engine:                                   # Engine settings.
       min_time: 20                       # Time the bot must have at least to use the online move.
       timeout: 5                          # Time the server has to respond.
   offer_draw:
-    enabled: false                        # Activate whether the bot should offer draw.
+    enabled: true                        # Activate whether the bot should offer draw.
     score: 10                             # If the absolute value of the score is less than or equal to this value, the bot offers/accepts draw (in cp)
     consecutive_moves: 10                 # How many moves in a row the absolute value of the score has to be below the draw value
     min_game_length: 30                   # Earliest move in which draw is offered.
@@ -40,13 +40,14 @@ engine:                                   # Engine settings.
     score: -1000                          # If the score is less than or equal to this value, the bot resigns (in cp).
     consecutive_moves: 5                  # How many moves in a row the score has to be below the resign value.
   uci_options:                            # Arbitrary UCI options passed to the engine. (Commenting allowed)
-    Move Overhead: 294                    # Increase if your bot flags games too often.
+    Move Overhead: 300                    # Increase if your bot flags games too often.
     Threads: 3                            # Max CPU threads the engine can use.
-    Hash: 256                             # Max memory (in megabytes) the engine can allocate.
-    MultiPV: 80
+    Hash: 128                             # Max memory (in megabytes) the engine can allocate.
+    MultiPV: 500
     Skill Level: 20
+    Slow Mover: 30
  
-move_overhead_multiplier: 2.0             # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+move_overhead_multiplier: 3.1            # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
 
 challenge:                                # Incoming challenges. (Commenting allowed)
   concurrency: 1                          # Number of games to play simultaneously.
