@@ -8,7 +8,7 @@ engine:                                   # Engine settings.
     enabled: true                         # Activate polyglot book.
     books:
       white: "lichess-book"                      # Name of the book to use as white.
-      black: "bestbook.bin"                         # Name of the book to use as black.
+      black: "bestbook"                         # Name of the book to use as black.
       standard: null                # Name of the book to use if there is no specific book for white, black or chess960.
       chess960: null                      # Name of the book to use for Chess960.
     selection: "best_move"                # Move selection is one of "weighted_random", "uniform_random" or "best_move".
@@ -45,7 +45,7 @@ engine:                                   # Engine settings.
     Hash: 128                             # Max memory (in megabytes) the engine can allocate.
     MultiPV: 17
     Skill Level: 20
-    Slow Mover: 299
+    Slow Mover: 44
  
 move_overhead_multiplier: 9             # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
 
